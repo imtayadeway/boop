@@ -10,7 +10,7 @@ module Boop
       expires_in: CACHE_TTL,
       race_condition_ttl: RACE_CONDITION_TTL,
       reconnect_attempts: 1,
-      url: "redis://boop:1234",
+      url: ENV["redis_url"],
       error_handler: -> (method:, returning:, exception:) {
         if Redis::BaseConnectionError === exception
           raise ConnectionError
