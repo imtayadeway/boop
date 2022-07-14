@@ -8,6 +8,7 @@ gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", github: "rails/rails", branch: "7-0-stable"
+gem "redis"
 gem "sprockets-rails"
 
 group :development do
